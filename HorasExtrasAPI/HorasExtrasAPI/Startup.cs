@@ -1,3 +1,4 @@
+using HorasExtrasAPI.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Microsoft.EntityFrameworkCore;
 namespace HorasExtrasAPI
 {
     public class Startup
@@ -26,6 +27,10 @@ namespace HorasExtrasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //Configuracion de la conexion a la base de datos
+            services.AddDbContext<HorasExtrasDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("SqlConexionHorasExtras")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,7 @@
 
 -- Db HorasExtras
-
+--create database HorasExtras
+use HorasExtras
 create table Departamento (
 IdDepartamento int identity(1,1) primary key,
 NombreDepartamento nvarchar(50) not null unique,
@@ -24,59 +25,15 @@ IdEmpleado nvarchar(8) not null unique,
 Nombre nvarchar(30) not null,
 Apellido nvarchar(30) not null,
 Correo nvarchar(50) not null,
-IdOficina nvarchar(3) not null,
 FechaCreacion datetime not null default(getdate()),
 Enable bit not null
 );
 
-create table PerfilHorasExtras(
-IdPerfil int identity primary key,
-NombrePerfil nvarchar(30),
-Enable bit not null
-);
 
-create table UsuarioPerfilHorasExtras(
-IdUsuarioPerfil int identity primary key,
-[User] nvarchar(25) not null,
-IdPerfil int not null foreign key references PerfilHorasExtras(IdPerfil),
-Enable bit not null
-)
-
---create table Departamento (
---IdDepartamento int identity,
---CodigoDepartamento nvarchar(5) primary key,
---NombreDepartamento nvarchar(50) not null unique,
---Enable bit not null
---);
-
---create table UsuarioDepartamento(
---IdUsuarioDepartamento int identity primary key,
---[User] nvarchar(25) not null foreign key references Usuario([User]) ,
---CodigoDepartamento nvarchar(5) not null foreign key references Departamento(CodigoDepartamento),
---Enable bit not null
---);
-
-
-create table Modulo(
-IdModulo int identity primary key,
-NombreModulo nvarchar(30) unique,
-Icono nvarchar(30),
-Ruta nvarchar(30),
-Enable bit not null 
-);
-
-create table UsuarioModulo(
-IdUsuarioModulo int identity primary key,
-[User] nvarchar(25)  foreign key references Usuario([User]),
-IdModulo int  foreign key references Modulo(IdModulo),
-Supervisor bit not null,
-Enable  bit not null
-);
 
 create table Menu
 (
  IdMenu int identity primary key,
- IdModulo int not null,
  NombreMenu nvarchar(25),
  Icono nvarchar(30),
  Ruta nvarchar(30),
@@ -93,7 +50,7 @@ create table UsuarioMenu
 );
 
 
---Db HorasExtras
+
 
 create table TipoHorasExtras(
 IdTipoHora int identity primary key,
