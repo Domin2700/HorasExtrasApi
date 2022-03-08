@@ -12,6 +12,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Diagnostics;
+using Serilog;
+using HorasExtrasAPI.Models;
+using Newtonsoft.Json;
+
 namespace HorasExtrasAPI
 {
     public class Startup
@@ -27,7 +33,6 @@ namespace HorasExtrasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
             //Configuracion de la conexion a la base de datos
             services.AddDbContext<HorasExtrasDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("SqlConexionHorasExtras")));
@@ -43,10 +48,23 @@ namespace HorasExtrasAPI
 
             app.UseHttpsRedirection();
 
+            // Errors Middleware
+            app.UseExceptionHandler(error => error.Run(async context =>
+            {
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = exceptionHandlerPathFeature.Error;
+
+                var result = JsonConvert.SerializeObject(new { error = exception.Message });
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(result);
+            }));
+
+            // It should be one of your very first registrations
+            app.UseExceptionHandler("/error"); // Add this
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
+
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

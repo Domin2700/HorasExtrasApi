@@ -34,6 +34,8 @@ namespace HorasExtrasAPI.Controllers
             {
 
             }
+
+            return Ok();
         }
 
     }
