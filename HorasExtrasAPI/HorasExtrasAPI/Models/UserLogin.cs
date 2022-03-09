@@ -9,7 +9,7 @@ namespace HorasExtrasAPI.Models
     public class UserLogin
     {
         [Required]
-        public string user { get; set; }
+        public string User { get; set; }
         [Required]
         public string Pwd { get; set; }
     }

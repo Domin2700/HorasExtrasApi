@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2tbpYCR5N/KGAIZwpY3WwagKn+CbFi49bN5k6Kcq9gBIlOrz1tXZYrDA5lXmHWY8WewDGXb67ZZeXFHhDpODkg==",
+  "dgSpecHash": "p4794mYW/x52a3nl1j6YsC0bpwl3mJ++UTyvfm4cS46JWCqCLGsLwin3h0T8OaRy9hQDuc5L5LPaek+hDoPsyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\damia\\OneDrive\\Escritorio\\Horas Extras\\HorasExtrasAPI\\HorasExtrasAPI\\HorasExtrasAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\damia\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.23\\microsoft.aspnetcore.authentication.jwtbearer.3.1.23.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -34,7 +35,7 @@
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
-    "C:\\Users\\damia\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",

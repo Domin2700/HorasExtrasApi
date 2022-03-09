@@ -17,6 +17,9 @@ using Microsoft.AspNetCore.Diagnostics;
 using Serilog;
 using HorasExtrasAPI.Models;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace HorasExtrasAPI
 {
@@ -33,6 +36,23 @@ namespace HorasExtrasAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //Configuracion de Json Web Tokens
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                options.TokenValidationParameters = new TokenValidationParameters {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["Jwt:Issuer"],
+                    ValidAudience = Configuration["Jwt:Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"])),
+                    ClockSkew = TimeSpan.Zero
+
+                });
+
+
             //Configuracion de la conexion a la base de datos
             services.AddDbContext<HorasExtrasDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("SqlConexionHorasExtras")));
@@ -61,8 +81,6 @@ namespace HorasExtrasAPI
 
             // It should be one of your very first registrations
             app.UseExceptionHandler("/error"); // Add this
-            app.UseEndpoints(endpoints => endpoints.MapControllers());
-
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

@@ -62,3 +62,4 @@ C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\ob
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.dll
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.pdb
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.genruntimeconfig.cache
+C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.csprojAssemblyReference.cache
