@@ -12,7 +12,9 @@ namespace HorasExtrasAPI.Models
         public int IdUsuario { get; set; }
         [MaxLength(25)]
         public string User { get; set; }
-        [MaxLength(8)]
+        [MinLength(8)]
+        public string Pwd { get; set; }
+        [MinLength(8),MaxLength(8)]
         public string IdEmpleado { get; set; }
         [MaxLength(30)]
         public string Nombre { get; set; }

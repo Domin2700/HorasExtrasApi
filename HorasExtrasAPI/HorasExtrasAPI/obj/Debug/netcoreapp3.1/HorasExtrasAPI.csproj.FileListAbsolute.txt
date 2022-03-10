@@ -7,6 +7,7 @@ C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bi
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\HorasExtrasAPI.dll
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\HorasExtrasAPI.pdb
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\Json.Net.dll
+C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -62,4 +63,3 @@ C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\ob
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.dll
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.pdb
 C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.genruntimeconfig.cache
-C:\Users\damia\OneDrive\Escritorio\Horas Extras\HorasExtrasAPI\HorasExtrasAPI\obj\Debug\netcoreapp3.1\HorasExtrasAPI.csprojAssemblyReference.cache
