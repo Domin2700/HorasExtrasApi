@@ -37,6 +37,7 @@ namespace HorasExtrasAPI
         {
             services.AddControllers();
 
+
             //Configuracion de Json Web Tokens
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -51,7 +52,6 @@ namespace HorasExtrasAPI
                     ClockSkew = TimeSpan.Zero
 
                 });
-
 
             //Configuracion de la conexion a la base de datos
             services.AddDbContext<HorasExtrasDbContext>(options =>

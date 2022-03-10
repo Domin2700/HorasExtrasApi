@@ -14,11 +14,12 @@ using System.Threading.Tasks;
 namespace HorasExtrasAPI.Controllers
 {
     [AllowAnonymous]
+    [Route("[controller]")]
     [ApiExplorerSettings(IgnoreApi = true)]
     public class ErrorsController : Controller
     {
        
-        [Route("error")]
+        [Route("/error")]
         public MyErrorResponse MyErrorResponse ()
         {
             var context = HttpContext.Features.Get<IExceptionHandlerFeature>();

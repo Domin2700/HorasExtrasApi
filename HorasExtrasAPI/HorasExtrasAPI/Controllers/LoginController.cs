@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace HorasExtrasAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class LoginController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -28,18 +28,18 @@ namespace HorasExtrasAPI.Controllers
             _context = context;
         }
 
-
+        [HttpPost("/login")]
         public async Task<IActionResult> Login([FromBody] UserLogin userLogin)
         {
             if(ModelState.IsValid)
             {
                 var usuario = await _context.Usuario
                     .AnyAsync(usuario => 
-                        usuario.User.ToLower() == userLogin.User.ToLower() && usuario.Enable == true );
+                        usuario.User.ToLower() == userLogin.User.ToLower() && usuario.Pwd == userLogin.Pwd  &&usuario.Enable == true );
 
                 if(usuario)
                 {
-                     BuildToken(userLogin.User.Trim().ToLower());
+                    return BuildToken(userLogin.User.Trim().ToLower());
                 }
                 else
                 {
@@ -49,11 +49,14 @@ namespace HorasExtrasAPI.Controllers
             }
             else
             {
-
+                return BadRequest(ModelState);
             }
 
-            return Ok();
+            
         }
+
+
+
 
 
         //En este metodo  genera y envia al token al cliente

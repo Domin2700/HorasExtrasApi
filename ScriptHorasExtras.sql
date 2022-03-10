@@ -21,6 +21,7 @@ Enable bit not null
 create table Usuario(
 IdUsuario int identity,
 [User] nvarchar(25) primary key,
+Pwd nvarchar(50) not null
 IdEmpleado nvarchar(8) not null unique,
 Nombre nvarchar(30) not null,
 Apellido nvarchar(30) not null,
